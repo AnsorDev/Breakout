@@ -1,0 +1,72 @@
+[gd_scene load_steps=8 format=3 uid="uid://hnide6cdjbju"]
+
+[ext_resource type="Script" path="res://Scripts/brick.gd" id="1_bhjuc"]
+[ext_resource type="AudioStream" uid="uid://dx5fh6fbuqa17" path="res://Assets/Audio/mixkit-body-punch-quick-hit-2153.wav" id="2_lq2ko"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_meg81"]
+size = Vector2(50, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p0kjc"]
+size = Vector2(50, 20)
+
+[sub_resource type="Animation" id="Animation_vuttq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MeshInstance2D:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_qdamk"]
+resource_name = "shrink"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MeshInstance2D:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.133333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_g8fg4"]
+_data = {
+"RESET": SubResource("Animation_vuttq"),
+"disappear": SubResource("Animation_qdamk")
+}
+
+[node name="Brick" type="StaticBody2D"]
+scale = Vector2(1.2, 1.2)
+collision_layer = 4
+collision_mask = 2
+script = ExtResource("1_bhjuc")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+unique_name_in_owner = true
+mesh = SubResource("QuadMesh_meg81")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource("RectangleShape2D_p0kjc")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("2_lq2ko")
+volume_db = -6.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
+libraries = {
+"": SubResource("AnimationLibrary_g8fg4")
+}

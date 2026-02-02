@@ -1,0 +1,34 @@
+[remap]
+
+importer="font_data_dynamic"
+type="FontFile"
+uid="uid://d4fu5b5v8v6up"
+path="res://.godot/imported/SF Atarian System Extended.ttf-30fceca3d9af4b2f9c53ed1943b509a5.fontdata"
+
+[deps]
+
+source_file="res://Assets/Fonts/SF Atarian System Extended.ttf"
+dest_files=["res://.godot/imported/SF Atarian System Extended.ttf-30fceca3d9af4b2f9c53ed1943b509a5.fontdata"]
+
+[params]
+
+Rendering=null
+antialiasing=1
+generate_mipmaps=false
+disable_embedded_bitmaps=true
+multichannel_signed_distance_field=false
+msdf_pixel_range=8
+msdf_size=48
+allow_system_fallback=true
+force_autohinter=false
+hinting=1
+subpixel_positioning=1
+oversampling=0.0
+Fallbacks=null
+fallbacks=[]
+Compress=null
+compress=true
+preload=[]
+language_support={}
+script_support={}
+opentype_features={}

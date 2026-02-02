@@ -1,0 +1,58 @@
+[gd_scene load_steps=9 format=3 uid="uid://btefldvpd780y"]
+
+[ext_resource type="Script" path="res://Scripts/ball.gd" id="1_2054m"]
+[ext_resource type="AudioStream" uid="uid://q6u5jgj2a0eh" path="res://Assets/Audio/mixkit-game-ball-tap-2073.wav" id="2_u8mb8"]
+[ext_resource type="AudioStream" uid="uid://cue21eq4yimix" path="res://Assets/Audio/mixkit-electronic-retro-block-hit-2185.wav" id="3_6oib8"]
+[ext_resource type="AudioStream" uid="uid://br06qcxphalsi" path="res://Assets/Audio/1up3.ogg" id="4_7h5cl"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_d5qdm"]
+friction = 0.0
+bounce = 1.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_b6soo"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4oh86"]
+radius = 11.0454
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rqfmg"]
+radius = 9.05539
+
+[node name="Ball" type="RigidBody2D"]
+collision_layer = 2
+collision_mask = 13
+physics_material_override = SubResource("PhysicsMaterial_d5qdm")
+gravity_scale = 0.0
+continuous_cd = 2
+contact_monitor = true
+max_contacts_reported = 1
+script = ExtResource("1_2054m")
+metadata/_edit_group_ = true
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+position = Vector2(0, 3.8147e-06)
+scale = Vector2(22, 22)
+mesh = SubResource("SphereMesh_b6soo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource("CircleShape2D_4oh86")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+visible = false
+shape = SubResource("CircleShape2D_rqfmg")
+
+[node name="HurtAudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("3_6oib8")
+volume_db = -8.0
+
+[node name="CollisionAudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("2_u8mb8")
+volume_db = 8.0
+
+[node name="RepositionStreamPlayer" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("4_7h5cl")

@@ -1,0 +1,84 @@
+[gd_scene load_steps=9 format=3 uid="uid://cpmprjrd4xy46"]
+
+[ext_resource type="PackedScene" uid="uid://cf01sje1yfyts" path="res://Scenes/ui.tscn" id="1_17lu7"]
+[ext_resource type="PackedScene" uid="uid://omty10n3ganu" path="res://Scenes/player.tscn" id="2_3scty"]
+[ext_resource type="PackedScene" uid="uid://btefldvpd780y" path="res://Scenes/ball.tscn" id="3_58ouc"]
+[ext_resource type="PackedScene" uid="uid://b6revejnkp3km" path="res://Scenes/brick_set.tscn" id="4_r7apg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n8bag"]
+size = Vector2(15.625, 592)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qqdbe"]
+size = Vector2(14.9998, 932)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4ol6d"]
+size = Vector2(1692, 319)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_glyf8"]
+size = Vector2(107.5, 83)
+
+[node name="Game" type="Node2D"]
+
+[node name="CanvasLayerBackground" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayerBackground"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.109804, 0.0941176, 0.121569, 1)
+
+[node name="CanvasLayerForground" type="CanvasLayer" parent="."]
+
+[node name="UI" parent="CanvasLayerForground" instance=ExtResource("1_17lu7")]
+
+[node name="Player" parent="." instance=ExtResource("2_3scty")]
+unique_name_in_owner = true
+position = Vector2(450, 576)
+move_force = 6.0
+
+[node name="Ball" parent="." instance=ExtResource("3_58ouc")]
+position = Vector2(450, 550)
+collision_priority = 5.0
+
+[node name="BrickSet" parent="." instance=ExtResource("4_r7apg")]
+position = Vector2(450, 47)
+
+[node name="Walls" type="StaticBody2D" parent="."]
+collision_layer = 8
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls"]
+position = Vector2(-7.875, 296)
+shape = SubResource("RectangleShape2D_n8bag")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Walls"]
+position = Vector2(907.813, 296)
+shape = SubResource("RectangleShape2D_n8bag")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Walls"]
+position = Vector2(450, -7.99944)
+rotation = 1.57079
+shape = SubResource("RectangleShape2D_qqdbe")
+
+[node name="LoseArea2D" type="Area2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(450, 624)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LoseArea2D"]
+position = Vector2(0, 155.5)
+shape = SubResource("RectangleShape2D_4ol6d")
+debug_color = Color(0.927686, 0.225906, 0.249411, 0.42)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="LoseArea2D"]
+position = Vector2(535.25, -45.5)
+shape = SubResource("RectangleShape2D_glyf8")
+debug_color = Color(0.927686, 0.225906, 0.249411, 0.42)
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="LoseArea2D"]
+position = Vector2(-535, -45)
+shape = SubResource("RectangleShape2D_glyf8")
+debug_color = Color(0.927686, 0.225906, 0.249411, 0.42)

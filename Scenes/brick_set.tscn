@@ -1,0 +1,210 @@
+[gd_scene load_steps=2 format=3 uid="uid://b6revejnkp3km"]
+
+[ext_resource type="PackedScene" uid="uid://hnide6cdjbju" path="res://Scenes/brick.tscn" id="1_8ofv1"]
+
+[node name="BrickSet" type="Node2D"]
+scale = Vector2(1.2, 1.2)
+
+[node name="Row1" type="Node2D" parent="."]
+modulate = Color(0.434235, 1, 0.769821, 1)
+position = Vector2(0, 149.167)
+
+[node name="Brick" parent="Row1" instance=ExtResource("1_8ofv1")]
+position = Vector2(-285, 0)
+
+[node name="Brick2" parent="Row1" instance=ExtResource("1_8ofv1")]
+position = Vector2(-221.667, 0)
+
+[node name="Brick3" parent="Row1" instance=ExtResource("1_8ofv1")]
+position = Vector2(-158.333, 0)
+
+[node name="Brick4" parent="Row1" instance=ExtResource("1_8ofv1")]
+position = Vector2(-95, 0)
+
+[node name="Brick5" parent="Row1" instance=ExtResource("1_8ofv1")]
+position = Vector2(-31.6666, 0)
+
+[node name="Brick6" parent="Row1" instance=ExtResource("1_8ofv1")]
+position = Vector2(31.6667, 0)
+
+[node name="Brick7" parent="Row1" instance=ExtResource("1_8ofv1")]
+position = Vector2(95, 0)
+
+[node name="Brick8" parent="Row1" instance=ExtResource("1_8ofv1")]
+position = Vector2(158.333, 0)
+
+[node name="Brick9" parent="Row1" instance=ExtResource("1_8ofv1")]
+position = Vector2(221.667, 0)
+
+[node name="Brick10" parent="Row1" instance=ExtResource("1_8ofv1")]
+position = Vector2(285, 0)
+
+[node name="Row2" type="Node2D" parent="."]
+modulate = Color(0.647059, 1, 0.435294, 1)
+position = Vector2(0, 121.667)
+
+[node name="Brick" parent="Row2" instance=ExtResource("1_8ofv1")]
+position = Vector2(-285, 0)
+
+[node name="Brick2" parent="Row2" instance=ExtResource("1_8ofv1")]
+position = Vector2(-221.667, 0)
+
+[node name="Brick3" parent="Row2" instance=ExtResource("1_8ofv1")]
+position = Vector2(-158.333, 0)
+
+[node name="Brick4" parent="Row2" instance=ExtResource("1_8ofv1")]
+position = Vector2(-95, 0)
+
+[node name="Brick5" parent="Row2" instance=ExtResource("1_8ofv1")]
+position = Vector2(-31.6666, 0)
+
+[node name="Brick6" parent="Row2" instance=ExtResource("1_8ofv1")]
+position = Vector2(31.6667, 0)
+
+[node name="Brick7" parent="Row2" instance=ExtResource("1_8ofv1")]
+position = Vector2(95, 0)
+
+[node name="Brick8" parent="Row2" instance=ExtResource("1_8ofv1")]
+position = Vector2(158.333, 0)
+
+[node name="Brick9" parent="Row2" instance=ExtResource("1_8ofv1")]
+position = Vector2(221.667, 0)
+
+[node name="Brick10" parent="Row2" instance=ExtResource("1_8ofv1")]
+position = Vector2(285, 0)
+
+[node name="Row3" type="Node2D" parent="."]
+modulate = Color(1, 0.921569, 0.435294, 1)
+position = Vector2(0, 94.1667)
+
+[node name="Brick" parent="Row3" instance=ExtResource("1_8ofv1")]
+position = Vector2(-285, 0)
+
+[node name="Brick2" parent="Row3" instance=ExtResource("1_8ofv1")]
+position = Vector2(-221.667, 0)
+
+[node name="Brick3" parent="Row3" instance=ExtResource("1_8ofv1")]
+position = Vector2(-158.333, 0)
+
+[node name="Brick4" parent="Row3" instance=ExtResource("1_8ofv1")]
+position = Vector2(-95, 0)
+
+[node name="Brick5" parent="Row3" instance=ExtResource("1_8ofv1")]
+position = Vector2(-31.6666, 0)
+
+[node name="Brick6" parent="Row3" instance=ExtResource("1_8ofv1")]
+position = Vector2(31.6667, 0)
+
+[node name="Brick7" parent="Row3" instance=ExtResource("1_8ofv1")]
+position = Vector2(95, 0)
+
+[node name="Brick8" parent="Row3" instance=ExtResource("1_8ofv1")]
+position = Vector2(158.333, 0)
+
+[node name="Brick9" parent="Row3" instance=ExtResource("1_8ofv1")]
+position = Vector2(221.667, 0)
+
+[node name="Brick10" parent="Row3" instance=ExtResource("1_8ofv1")]
+position = Vector2(285, 0)
+
+[node name="Row4" type="Node2D" parent="."]
+modulate = Color(1, 0.705882, 0.435294, 1)
+position = Vector2(0, 66.6667)
+
+[node name="Brick" parent="Row4" instance=ExtResource("1_8ofv1")]
+position = Vector2(-285, 0)
+
+[node name="Brick2" parent="Row4" instance=ExtResource("1_8ofv1")]
+position = Vector2(-221.667, 0)
+
+[node name="Brick3" parent="Row4" instance=ExtResource("1_8ofv1")]
+position = Vector2(-158.333, 0)
+
+[node name="Brick4" parent="Row4" instance=ExtResource("1_8ofv1")]
+position = Vector2(-95, 0)
+
+[node name="Brick5" parent="Row4" instance=ExtResource("1_8ofv1")]
+position = Vector2(-31.6666, 0)
+
+[node name="Brick6" parent="Row4" instance=ExtResource("1_8ofv1")]
+position = Vector2(31.6667, 0)
+
+[node name="Brick7" parent="Row4" instance=ExtResource("1_8ofv1")]
+position = Vector2(95, 0)
+
+[node name="Brick8" parent="Row4" instance=ExtResource("1_8ofv1")]
+position = Vector2(158.333, 0)
+
+[node name="Brick9" parent="Row4" instance=ExtResource("1_8ofv1")]
+position = Vector2(221.667, 0)
+
+[node name="Brick10" parent="Row4" instance=ExtResource("1_8ofv1")]
+position = Vector2(285, 0)
+
+[node name="Row5" type="Node2D" parent="."]
+modulate = Color(1, 0.435294, 0.462745, 1)
+position = Vector2(0, 39.1667)
+
+[node name="Brick" parent="Row5" instance=ExtResource("1_8ofv1")]
+position = Vector2(-285, 0)
+
+[node name="Brick2" parent="Row5" instance=ExtResource("1_8ofv1")]
+position = Vector2(-221.667, 0)
+
+[node name="Brick3" parent="Row5" instance=ExtResource("1_8ofv1")]
+position = Vector2(-158.333, 0)
+
+[node name="Brick4" parent="Row5" instance=ExtResource("1_8ofv1")]
+position = Vector2(-95, 0)
+
+[node name="Brick5" parent="Row5" instance=ExtResource("1_8ofv1")]
+position = Vector2(-31.6666, 0)
+
+[node name="Brick6" parent="Row5" instance=ExtResource("1_8ofv1")]
+position = Vector2(31.6667, 0)
+
+[node name="Brick7" parent="Row5" instance=ExtResource("1_8ofv1")]
+position = Vector2(95, 0)
+
+[node name="Brick8" parent="Row5" instance=ExtResource("1_8ofv1")]
+position = Vector2(158.333, 0)
+
+[node name="Brick9" parent="Row5" instance=ExtResource("1_8ofv1")]
+position = Vector2(221.667, 0)
+
+[node name="Brick10" parent="Row5" instance=ExtResource("1_8ofv1")]
+position = Vector2(285, 0)
+
+[node name="Row6" type="Node2D" parent="."]
+modulate = Color(1, 0.435294, 0.721569, 1)
+position = Vector2(0, 11.6667)
+
+[node name="Brick" parent="Row6" instance=ExtResource("1_8ofv1")]
+position = Vector2(-285, 0)
+
+[node name="Brick2" parent="Row6" instance=ExtResource("1_8ofv1")]
+position = Vector2(-221.667, 0)
+
+[node name="Brick3" parent="Row6" instance=ExtResource("1_8ofv1")]
+position = Vector2(-158.333, 0)
+
+[node name="Brick4" parent="Row6" instance=ExtResource("1_8ofv1")]
+position = Vector2(-95, 0)
+
+[node name="Brick5" parent="Row6" instance=ExtResource("1_8ofv1")]
+position = Vector2(-31.6666, 0)
+
+[node name="Brick6" parent="Row6" instance=ExtResource("1_8ofv1")]
+position = Vector2(31.6667, 0)
+
+[node name="Brick7" parent="Row6" instance=ExtResource("1_8ofv1")]
+position = Vector2(95, 0)
+
+[node name="Brick8" parent="Row6" instance=ExtResource("1_8ofv1")]
+position = Vector2(158.333, 0)
+
+[node name="Brick9" parent="Row6" instance=ExtResource("1_8ofv1")]
+position = Vector2(221.667, 0)
+
+[node name="Brick10" parent="Row6" instance=ExtResource("1_8ofv1")]
+position = Vector2(285, 0)

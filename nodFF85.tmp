@@ -1,0 +1,60 @@
+[gd_scene load_steps=8 format=3 uid="uid://cpmprjrd4xy46"]
+
+[ext_resource type="Script" path="res://ball.gd" id="1_4p6po"]
+[ext_resource type="Script" path="res://player.gd" id="1_kmfpy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2ic2d"]
+size = Vector2(160, 16)
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_d5qdm"]
+friction = 0.0
+bounce = 1.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4oh86"]
+radius = 15.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n8bag"]
+size = Vector2(16, 592)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qqdbe"]
+size = Vector2(16, 1184)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Player" type="StaticBody2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(560, 576)
+script = ExtResource("1_kmfpy")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+unique_name_in_owner = true
+shape = SubResource("RectangleShape2D_2ic2d")
+
+[node name="Ball" type="RigidBody2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(560, 552)
+physics_material_override = SubResource("PhysicsMaterial_d5qdm")
+gravity_scale = 0.0
+contact_monitor = true
+max_contacts_reported = 1
+script = ExtResource("1_4p6po")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ball"]
+shape = SubResource("CircleShape2D_4oh86")
+
+[node name="Walls" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls"]
+position = Vector2(-8, 296)
+shape = SubResource("RectangleShape2D_n8bag")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Walls"]
+position = Vector2(1160, 296)
+shape = SubResource("RectangleShape2D_n8bag")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Walls"]
+position = Vector2(576, -8.00004)
+rotation = 1.57079
+shape = SubResource("RectangleShape2D_qqdbe")
