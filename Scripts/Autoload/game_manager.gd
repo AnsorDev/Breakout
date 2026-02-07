@@ -21,6 +21,11 @@ signal win
 
 # Autoload's _ready function is only called once when the game starts, reloading current scene no effect
 func _ready() -> void:
+	if OS.get_name() == "Web":
+		# Lower the master bus audio when in Web
+		var master_bus_index = AudioServer.get_bus_index("Master")
+		AudioServer.set_bus_volume_db(master_bus_index, -10.0)
+		
 	# Set highscore variable with the actual current highscore
 	_load_highscore()
 	if OS.get_name() == "Web":

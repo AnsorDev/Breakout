@@ -13,11 +13,6 @@ var speed := GameManager.ball_speed
 var wall_collision_amount := 0
 
 func _ready() -> void:
-	if OS.get_name() == "Web":
-		# Lower the master bus audio when in Web
-		var master_bus_index = AudioServer.get_bus_index("Master")
-		AudioServer.set_bus_volume_db(master_bus_index, -10.0)
-		
 	wall_collision_amount = 0
 	
 	print("speed: ", speed)

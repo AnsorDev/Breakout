@@ -120,6 +120,9 @@ func _ready() -> void:
 	_quit_button.pressed.connect(func() -> void:
 		# Web
 		if OS.get_name() == "Web":
+			GameManager.score = 0
+			GameManager.lives = 3
+			GameManager.ball_speed = 400.0
 			get_tree().reload_current_scene()
 		# Desktop
 		else:
